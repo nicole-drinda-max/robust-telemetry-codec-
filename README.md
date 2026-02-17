@@ -1,5 +1,7 @@
 # Robust Telemetry Codec
 
+**Author (original):** Alexandra-Nicole Anna Drinda
+
 **Pure-Python telemetry framing codec**  
 Fibonacci/Zeckendorf self-delimiting + phi-inspired interleaving + optional Hamming(13,8) FEC + CRC32
 
@@ -15,6 +17,10 @@ Designed for harsh or noisy channels (space telemetry, fusion diagnostics, embed
 - Optional extended Hamming(13,8) FEC: corrects 1-bit errors per codeword, detects many 2-bit errors
 - Framing: MAGIC, version, flags, sequence number, length, CRC32 + payload
 - Pure Python – zero external dependencies
+
+## Notes
+- v1.x prioritizes robustness and framing clarity over minimal bandwidth overhead.
+- Interleaving + FEC improve burst-error tolerance; CRC32 provides a fast integrity check.
 
 ## Quick Example
 
